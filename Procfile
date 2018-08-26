@@ -1,1 +1,1 @@
-web: sh -c 'cd chuchodev && gunicorn chuchodev.wsgi"
+web: sh -c 'cd chuchodev && gunicorn chuchodev.wsgi'
