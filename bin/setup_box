@@ -1,3 +1,26 @@
 #!/usr/bin/env bash
 
 # This file run everytime runs vagrant up!
+
+echo "==>Checking python version:"
+python --version
+pip --version
+
+
+# Git
+if command -v git &>/dev/null; then
+    echo "Git is installed"
+    git --version
+else
+    echo "Installing Git"
+    sudo apt-get install -y git
+fi
+
+# Check postgres
+if command -v psql --version &>/dev/null; then
+    echo "Postgres is installed"
+    psql --version
+else
+    echo "Must install postgres"
+fi
+

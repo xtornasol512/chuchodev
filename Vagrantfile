@@ -49,6 +49,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "shell", privileged: false, run: "always", path: "config/vagrantvars"
   # Run only one time
   config.vm.provision "shell", privileged: false, path: "bin/install_python3"
+  config.vm.provision "shell", privileged: false, path: "bin/install_postgres"
   # Run always - Our personal provision
   config.vm.provision "shell", privileged: false, run: "always", path: "bin/setup_box"
 

@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# Install postgres 10
+wget -q https://www.postgresql.org/media/keys/ACCC4CF8.asc -O - | sudo apt-key add -
+
+sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
+
+echo "==>Installing postgresql"
+sudo apt-get update
+sudo apt-get install -y libpq-dev postgresql postgresql-contrib libxml2-dev libxslt1-dev zlib1g-dev build-essential libssl-dev libffi-dev
+
+sudo -i -u postgres psql -c "CREATE DATABASE mydb"
+sudo -i -u postgres psql -c "CREATE DATABASE vagrant" # To eliminate error when type psql
+
+echo "Creating user and granting privileges"
+sudo -i -u postgres psql -c "CREATE USER vagrant WITH PASSWORD 'vagrant';"
+sudo -i -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE mydb TO vagrant;"
+
+echo "==> Finish postgres installation!"
