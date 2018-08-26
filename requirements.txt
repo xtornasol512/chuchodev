@@ -4,7 +4,6 @@
 wagtail==2.2.1
 Django==2.0.8
 
-
 # RestFramework
 djangorestframework==3.8.2
 
