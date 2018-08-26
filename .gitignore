@@ -3,6 +3,9 @@
 tmp/
 .DS_Store
 *.swp
+
+# Env
+.venv/
 # Python compile files
 *.pyc
 *__pycache__/
