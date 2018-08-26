@@ -7,7 +7,7 @@
 
 - Django Wagtail
 - Vagrant
-- Python3
+- Python3 with [PyEnv](https://github.com/pyenv/pyenv#installation)
 - AWS s3
 - AWS SES
 

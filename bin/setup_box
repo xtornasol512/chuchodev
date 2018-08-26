@@ -4,8 +4,10 @@
 
 echo "==>Checking python version:"
 python --version
-pip --version
 
+pip install --upgrade pip
+pip --version
+pip install -r /vagrant/requirements.txt
 
 # Git
 if command -v git &>/dev/null; then
