@@ -1,6 +1,8 @@
 # Tmp Files
 *~
 tmp/
+.DS_Store
+*.swp
 # Python compile files
 *.pyc
 *__pycache__/
