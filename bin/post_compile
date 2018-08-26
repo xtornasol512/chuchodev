@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+# This script run after create  app on heroku
