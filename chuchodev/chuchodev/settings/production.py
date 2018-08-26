@@ -7,6 +7,9 @@ DEBUG = False
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = os.environ["SECRET_KEY"]
+
 # Allow all host headers
 ALLOWED_HOSTS = [
     os.environ["ALLOWED_HOST"],
