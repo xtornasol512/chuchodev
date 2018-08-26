@@ -11,7 +11,7 @@ ALLOWED_HOSTS = [
     os.environ["HEROKU_APP_NAME"] + ".herokuapp.com",]
 
 # STATICS
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 COMPRESS_OFFLINE = True
 COMPRESS_CSS_FILTERS = [
